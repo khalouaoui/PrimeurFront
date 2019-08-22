@@ -13,31 +13,31 @@ export class UserService {
 
 
   findAllUsers() {
-      return this.http.get(Settings.APP_URL + "/");
+      return this.http.get(Settings.APP_URL + '/');
   }
 
   findById(id: number) {
-      return this.http.get(Settings.APP_URL + "/" + id);
+      return this.http.get(Settings.APP_URL + '/' + id);
   }
 
   findByName(nom: String) {
-      return this.http.get(Settings.APP_URL + "/name/" + nom);
+      return this.http.get(Settings.APP_URL + '/name/' + nom);
   }
 
   findByPrenom(prenom: String) {
-      return this.http.get(Settings.APP_URL + "/find/" + prenom);
+      return this.http.get(Settings.APP_URL + '/find/' + prenom);
   }
 
   findByTechSkills(techskill: TechSkill) {
-      return this.http.get(Settings.APP_URL + "/find/" +TechSkill);
+      return this.http.get(Settings.APP_URL + '/find/' + TechSkill);
   }
 
   public createUser(user: User) {
       console.log('user service body :', user);
-      return this.http.post(Settings.APP_URL +"/" , user);
+      return this.http.post(Settings.APP_URL + '/' , user);
   }
 
   deleteById(id: number) {
-      return this.http.delete(Settings.APP_URL +"/" + id);
+      return this.http.delete(Settings.APP_URL + '/' + id);
   }
 }

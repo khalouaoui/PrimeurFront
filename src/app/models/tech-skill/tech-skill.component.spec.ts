@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ServerErrorComponent } from './server-error.component';
+import { TechSkillComponent } from './tech-skill.component';
 
-describe('ServerErrorComponent', () => {
-  let component: ServerErrorComponent;
-  let fixture: ComponentFixture<ServerErrorComponent>;
+describe('TechSkillComponent', () => {
+  let component: TechSkillComponent;
+  let fixture: ComponentFixture<TechSkillComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ServerErrorComponent ]
+      declarations: [ TechSkillComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ServerErrorComponent);
+    fixture = TestBed.createComponent(TechSkillComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
