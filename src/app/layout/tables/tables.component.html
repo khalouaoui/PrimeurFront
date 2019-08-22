@@ -1,9 +1,12 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <div [@routerTransition]>
     <app-page-header [heading]="'Tables'" [icon]="'fa-table'"></app-page-header>
     <div class="row">
         <div class="col col-xl-12 col-lg-12">
             <div class="card mb-3">
-                <div class="card-header">Users List</div>
+                <div class="card-header">Users List <a [routerLink]="['/signup']" class="btn btn-success btn-rounded">Add new User</a></div>
                 <table class="card-body table table-hover">
                     <thead>
                     <tr>
@@ -17,34 +20,19 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>NULL</td>
-                        <td>NULL</td>
-                        <td colspan="2"></td>
+                    <tr *ngFor="let user of users , let i=index">
+                        <th scope="row">{{this.user.id}}</th>
+                        <td>{{this.user.prenom}}</td>
+                        <td>{{this.user.nom}}</td>
+                        <td>{{this.user.mail}}</td>
+                        <td>{{this.user.equipe}}</td>
+                        <td>{{this.user.fonction}}</td>
+                        <td>
+                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                        </td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>NULL</td>
-                        <td>NULL</td>
-                        <td colspan="2"></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry the Bird</td>
-                        <td>NULL</td>
-                        <td>@twitter</td>
-                        <td>NULL</td>
-                        <td>NULL</td>
-                        <td colspan="2"></td>
-                    </tr>
-                    </tbody>
+                  </tbody>
                 </table>
             </div>
         </div>

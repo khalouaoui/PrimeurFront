@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
 
     constructor(
         public router: Router,
-        private userService:UserService,
+        private userService: UserService,
         private formBuilder: FormBuilder
     ) {
     }
@@ -35,17 +35,19 @@ export class LoginComponent implements OnInit {
 
     onSubmit() {
         if (this.userForm.valid) {
-            //alert('User form is valid!!');
-            //alert('form email value : ' + this.userForm.value.email + '---password:---' + this.userForm.value.password);
+            // alert('User form is valid!!');
+            // alert('form email value : ' + this.userForm.value.email + '---password:---' + this.userForm.value.password);
             const body = {
                 'mail': this.userForm.value.email,
                 'password': this.userForm.value.password
             };
-            this.userService.createUser(body).subscribe((data:any) => {
+            this.userService.createUser(body).subscribe((data: any) => {
                 console.log('------- data --------', data);
+                this.router.navigate(['']) ;
             }, (error: any) => {
                 console.log('-------- error -------', error);
-            })
+            });
+
         } else {
             alert('User form is not valid!!');
         }
