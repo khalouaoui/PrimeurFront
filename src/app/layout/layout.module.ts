@@ -7,6 +7,10 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SoftSkillComponent } from './soft-skill/soft-skill.component';
+import { UserComponent } from './user/user.component';
+import { TechSkillComponent } from './tech-skill/tech-skill.component';
+
 
 @NgModule({
     imports: [
@@ -15,6 +19,6 @@ import { HeaderComponent } from './components/header/header.component';
         TranslateModule,
         NgbDropdownModule
     ],
-    declarations: [LayoutComponent, SidebarComponent, HeaderComponent]
+    declarations: [LayoutComponent, SidebarComponent, HeaderComponent, SoftSkillComponent, UserComponent, TechSkillComponent]
 })
 export class LayoutModule {}

@@ -8,9 +8,8 @@ import { LanguageTranslationModule } from './shared/modules/language-translation
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
-import { SoftSkillComponent } from './models/soft-skill/soft-skill.component';
-import { TechSkillComponent } from './models/tech-skill/tech-skill.component';
-import { UserComponent } from './models/user/user.component';
+import {RouterModule} from '@angular/router';
+
 
 
 
@@ -21,12 +20,13 @@ import { UserComponent } from './models/user/user.component';
         BrowserAnimationsModule,
         HttpClientModule,
         LanguageTranslationModule,
-        AppRoutingModule
+        AppRoutingModule,
+        RouterModule
 
 
 
     ],
-    declarations: [AppComponent, SoftSkillComponent, TechSkillComponent, UserComponent],
+    declarations: [AppComponent],
     providers: [AuthGuard],
     bootstrap: [AppComponent]
 })

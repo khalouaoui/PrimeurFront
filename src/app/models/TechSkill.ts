@@ -5,6 +5,4 @@ export class TechSkill {
     categorie: string;
     noteAct?: number;
     noteSouhaite?: number;
-
-    
 }

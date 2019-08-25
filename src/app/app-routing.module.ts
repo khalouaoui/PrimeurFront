@@ -11,7 +11,9 @@ const routes: Routes = [
     /*{ path: '**', redirectTo: 'not-found' },*/
     /*{ path: '**', redirectTo: 'not-found' },*/
     { path: 'dash', loadChildren: () => import('./layout/dashboard/dashboard.module').then(m => m.DashboardModule) },
-    { path: '', loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule)}
+    { path: '', loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule)},
+    { path: 'Soft', loadChildren: () => import('./layout/soft-skill/soft-skill.module').then(m => m.SoftSkillModule)}
+
 
 ];
 
