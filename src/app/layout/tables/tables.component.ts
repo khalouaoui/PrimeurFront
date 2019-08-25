@@ -29,4 +29,12 @@ export class TablesComponent implements OnInit {
 
          });
     }
+    deleteUser(id: number) {
+        this.userService.deleteById(id)
+        .subscribe((data) => {
+          console.log('user deleted successfully! ') ;
+          location.reload() ;
+
+        });
+    }
 }
