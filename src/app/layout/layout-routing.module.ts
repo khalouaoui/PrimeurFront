@@ -12,9 +12,9 @@ const routes: Routes = [
             { path: 'charts', loadChildren: () => import('./charts/charts.module').then(m => m.ChartsModule) },
             { path: 'tables', loadChildren: () => import('./tables/tables.module').then(m => m.TablesModule) },
             { path: 'forms', loadChildren: () => import('./form/form.module').then(m => m.FormModule) },
-            { path: 'SoftSkills' , loadChildren: () => import('./soft-skill/soft-skill.module').then(m => m.SoftSkillModule)},
-            { path: 'TechSkills'},
-            { path: 'User'},
+            { path: 'user' , loadChildren: () => import('./user/user.module').then(m => m.UserModule)},
+            { path: 'soft-skill' , loadChildren: () => import('./soft-skill/soft-skill.module').then((m => m.SoftSkillModule))},
+            { path: 'tech-skill' , loadChildren: () => import('./tech-skill/tech-skill.module').then(m => m.TechSkillModule)},
         ]
     }
 ];

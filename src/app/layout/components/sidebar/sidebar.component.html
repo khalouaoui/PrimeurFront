@@ -25,19 +25,19 @@
             <li class="nested" [class.expand]="showMenu === 'pages'">
                 <ul class="submenu">
                     <li>
-                        <a href="javascript:void(0)">
+                        <a href="javascript:void(0)" [routerLink]="['/user']" [routerLinkActive]="['router-link-active']">
                             <i class="fa fa-monument"></i>&nbsp;
                             <span>{{ 'user' | translate }}</span>
                         </a>
                     </li>
                     <li>
-                        <a [routerLink]="['/SoftSkills']" [routerLinkActive]="['router-link-active']" href="javascript:void(0)">
+                        <a href="javascript:void(0)" [routerLink]="['/soft-skill']" [routerLinkActive]="['router-link-active']" >
                             <i class="fa fa-monument"></i>&nbsp;
                             <span>{{ 'soft Skills' | translate }}</span>
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)">
+                        <a href="javascript:void(0)" [routerLink]="['/tech-skill']" [routerLinkActive]="['router-link-active']">
                             <i class="fa fa-monument"></i>&nbsp;
                             <span>{{ 'Technical Skills' | translate }}</span>
                         </a>
