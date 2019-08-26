@@ -14,13 +14,17 @@ export class ChartsComponent implements OnInit {
         responsive: true
     };
     public barChartLabels: string[] = [
-        '2006',
-        '2007',
-        '2008',
-        '2009',
-        '2010',
-        '2011',
-        '2012'
+        'Empathy',
+        'Communication',
+        'Teamwork',
+        'Approachability and Helpfulness',
+        'Patience',
+        'Open-mindedness',
+        'Problem solving',
+        'Accountability',
+        'Creativity',
+        'Time management',
+        'learning capacity'
     ];
     public barChartType: string;
     public barChartLegend: boolean;
