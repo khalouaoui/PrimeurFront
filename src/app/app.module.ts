@@ -9,7 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
 import {RouterModule} from '@angular/router';
-import { UpdateComponent } from './update/update/update.component';
+
 
 
 
@@ -27,8 +27,7 @@ import { UpdateComponent } from './update/update/update.component';
 
 
     ],
-    declarations: [AppComponent, UpdateComponent],
-    providers: [AuthGuard],
+    declarations: [AppComponent],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
