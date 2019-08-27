@@ -1,2 +1,36 @@
-<p>hello</p>
-<h1>test</h1>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<div [@routerTransition]>
+    <app-page-header [heading]="'Soft-Skills'" [icon]="'fa-list'"></app-page-header>
+    <div class="row">
+        <div class="col col-xl-12 col-lg-12">
+            <div class="card mb-3">
+                <div class="card-header">Soft-Skill List </div>
+                <table class="card-body table table-hover">
+                    <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>nom </th>
+                        <th>note actuelle</th>
+                        <th>note souhaité</th>
+                        <th colspan="2">action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>1</td>
+                    <td>Empathy</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>
+                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                    </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
