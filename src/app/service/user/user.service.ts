@@ -21,11 +21,11 @@ export class UserService {
   }
 
   findByName(nom: String) {
-      return this.http.get(Settings.APP_URL + '/name/' + nom);
+      return this.http.get(Settings.APP_URL + '/last/' + nom);
   }
 
   findByPrenom(prenom: String) {
-      return this.http.get(Settings.APP_URL + '/find/' + prenom);
+      return this.http.get(Settings.APP_URL + '/first/' + prenom);
   }
 
   findByTechSkills(techskill: TechSkill) {
@@ -39,5 +39,9 @@ export class UserService {
 
   deleteById(id: number) {
       return this.http.delete(Settings.APP_URL + '/' + id);
+  }
+  public updateUser(id: number, user: User) {
+      console.log('current user:', user) ;
+      return this.http.put(Settings.APP_URL + '/' + id, user) ;
   }
 }
