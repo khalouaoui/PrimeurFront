@@ -6,10 +6,53 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tech-skill.component.scss']
 })
 export class TechSkillComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+     categories:
+        [
+            {
+                'name': 'developement',
+                'skills': ['java', 'jee' , 'c#' ]
+            },
+            {
+                'name': 'Database',
+                'skills': ['sql' , 'oracle']
+            },
+            {
+                'name': 'Framworks',
+                'skills': ['angular' , 'react' , 'spring']
+            },
+            {
+                'name': 'Build',
+                'skills': [
+                    'java'
+                ]
+            },
+            {
+                'name': 'Workflow engine',
+                'skills': [
+                    'java'
+                ]
+            },
+            {
+                'name': 'Versionning systems',
+                'skills': [
+                    'java'
+                ]
+            },
+            {
+                'name': 'Test tools',
+                'skills': [
+                    'java'
+                ]
+            },
+            {
+                'name': 'Continuous Integration',
+                'skills': [
+                    'java'
+                ]
+            }
+        ];
+    constructor() { }
+    ngOnInit() {
   }
 
 }
