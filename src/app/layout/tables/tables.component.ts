@@ -13,23 +13,44 @@ import { Router } from '@angular/router';
 })
 export class TablesComponent implements OnInit {
     public users: any ;
+    public id: number;
 
+<<<<<<< HEAD
     constructor(private router: Router , private userService: UserService) {}
+=======
+    constructor(private userService: UserService) {
+        this.getUsers();
+    }
+>>>>>>> ee171e65007fd3f6898ccdae159305e5eb9c7a40
 
     ngOnInit() {
-        this.getUsers() ;
     }
 
     getUsers() {
+<<<<<<< HEAD
          this.userService.findAllUsers()
          .subscribe(data => {
              console.log(data);
 
           this.users = data ;
           console.log('-------' + this.users[0].softSkills) ;
-
-         });
+=======
+        this.userService.findAllUsers().subscribe((data: any) => {
+                console.log('----- data is ------ ', data);
+                this.users = data;
+        }
+        );
     }
+>>>>>>> ee171e65007fd3f6898ccdae159305e5eb9c7a40
+
+    createUsers(user: User) {
+        this.userService.createUser(user)
+            .subscribe((data) => {
+                console.log('user created successfully');
+                location.reload();
+            });
+    }
+
     deleteUser(id: number) {
         this.userService.deleteById(id)
         .subscribe((data) => {

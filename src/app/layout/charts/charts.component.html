@@ -1,10 +1,10 @@
 <div [@routerTransition]>
     <app-page-header [heading]="'Charts'" [icon]="'fa-bar-chart-o'"></app-page-header>
     <div class="row">
-        <div class="col col-sm-12">
+        <div class="col col-sm-6">
             <div class="card mb-3">
                 <div class="card-header">
-                    Soft Skills
+                    Soft Skills Now
                 </div>
                 <div class="card-body">
                     <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
@@ -12,16 +12,31 @@
                 </div>
                 <div class="card-footer">
                     <button class="btn btn-info btn-sm" (click)="randomize()">Update</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col col-sm-6">
+            <div class="card mb-3">
+                <div class="card-header">
+                    Soft Skills after one year
+                </div>
+                <div class="card-body">
+                    <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                    </canvas>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-info btn-sm" (click)="randomize()" disabled>Update</button>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="col col-sm-12">
+        <div class="col col-sm-6">
             <div class="card mb-3">
                 <div class="card-header">
-                    Technical Skills
+                    Technical Skills Now
                 </div>
                 <div class="card-body">
                     <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
@@ -32,5 +47,21 @@
                 </div>
             </div>
         </div>
+
+        <div class="col col-sm-6">
+            <div class="card mb-3">
+                <div class="card-header">
+                    Technical Skills after one year
+                </div>
+                <div class="card-body">
+                    <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                    </canvas>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-info btn-sm" (click)="randomize()" disabled>Update</button>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>

@@ -13,7 +13,6 @@ import {RouterModule} from '@angular/router';
 
 
 
-
 @NgModule({
     imports: [
         CommonModule,
@@ -28,6 +27,7 @@ import {RouterModule} from '@angular/router';
 
     ],
     declarations: [AppComponent],
+    providers: [AuthGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

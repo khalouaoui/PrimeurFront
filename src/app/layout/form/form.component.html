@@ -12,14 +12,45 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col col-sm-6">
-                            <label> nom </label>
-                            <input class="form-control" placeholder="Enter categorie">
+                            <label> nom de formation </label>
+                            <input class="form-control" placeholder="saisie le nom de formation">
                         </div>
 
                         <div class="col col-sm-6">
-                            <label>prenom</label>
-                            <input class="form-control" placeholder="enter skill name">
+                            <label>durée</label>
+                            <input type="number" class="form-control" placeholder="saisie la durée de formation/mois ">
                         </div>
+
+                        <div class="col col-sm-6">
+                            <label>categorie</label>
+                            <input class="form-control" placeholder="Categorie">
+                        </div>
+
+                        <div class="col col-sm-6">
+                            <label>Nombre de place disponible</label>
+                            <input  type="number" min="1" max="50" value="50" class="form-control" placeholder="place disponible">
+                        </div>
+
+                        <div class="col col-sm-6">
+                            <label>Nombre de place disponible</label>
+                            <input  type="date" min="2019-01-01" max="2019-12-31" class="form-control" placeholder="date de debut">
+                        </div>
+
+                        <div class="col col-sm-6">
+                            <label>Nombre de place disponible</label>
+                            <input  type="date" min="2019-01-01" max="2019-12-31" class="form-control" placeholder="date de fin">
+                        </div>
+
+                        <div class="col col-sm-12">
+                            <label>description de formation</label>
+                            <textarea  type="text"  class="form-control" placeholder="description"></textarea>
+                        </div>
+
+                        <div class="col col-sm-12 d-flex justify-content-center w-100 p-3">
+                            <a type="submit" class="btn btn-success ">envoyer</a> &nbsp;&nbsp;
+                            <a type="reset" class="btn btn-danger ">Delete</a>
+                        </div>
+
                     </div>
 
                 </div>
