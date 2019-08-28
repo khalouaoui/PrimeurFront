@@ -3,6 +3,7 @@ import { routerTransition } from '../../router.animations';
 import { UserService } from 'src/app/service/user/user.service';
 import { User } from 'src/app/models/user';
 import { error } from 'util';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-tables',
@@ -13,7 +14,7 @@ import { error } from 'util';
 export class TablesComponent implements OnInit {
     public users: any ;
 
-    constructor(private userService: UserService) {}
+    constructor(private router: Router , private userService: UserService) {}
 
     ngOnInit() {
         this.getUsers() ;
@@ -25,7 +26,7 @@ export class TablesComponent implements OnInit {
              console.log(data);
 
           this.users = data ;
-          console.log('-------' + this.users[0].mail) ;
+          console.log('-------' + this.users[0].softSkills) ;
 
          });
     }
@@ -36,5 +37,10 @@ export class TablesComponent implements OnInit {
           location.reload() ;
 
         });
+    }
+    soft(num: number) {
+        localStorage.setItem('id', num.toString() )  ;
+        console.log(localStorage.getItem('id'))  ;
+        this.router.navigate(['/soft-skill']);
     }
 }

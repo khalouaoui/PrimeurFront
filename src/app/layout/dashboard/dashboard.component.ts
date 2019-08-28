@@ -9,7 +9,7 @@ import { routerTransition } from '../../router.animations';
 })
 export class DashboardComponent implements OnInit {
 
-    constructor() {
+    constructor(/*private translate: TranslateService*/) {
     }
 
     ngOnInit() {}
