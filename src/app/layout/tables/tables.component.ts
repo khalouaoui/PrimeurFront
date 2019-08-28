@@ -12,23 +12,31 @@ import { error } from 'util';
 })
 export class TablesComponent implements OnInit {
     public users: any ;
+    public id: number;
 
-    constructor(private userService: UserService) {}
+    constructor(private userService: UserService) {
+        this.getUsers();
+    }
 
     ngOnInit() {
-        this.getUsers() ;
     }
 
     getUsers() {
-         this.userService.findAllUsers()
-         .subscribe(data => {
-             console.log(data);
-
-          this.users = data ;
-          console.log('-------' + this.users[0].mail) ;
-
-         });
+        this.userService.findAllUsers().subscribe((data: any) => {
+                console.log('----- data is ------ ', data);
+                this.users = data;
+        }
+        );
     }
+
+    createUsers(user: User) {
+        this.userService.createUser(user)
+            .subscribe((data) => {
+                console.log('user created successfully');
+                location.reload();
+            });
+    }
+
     deleteUser(id: number) {
         this.userService.deleteById(id)
         .subscribe((data) => {
